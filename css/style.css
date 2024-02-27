@@ -113,7 +113,7 @@ body {
 }
 .artikel h3 {
   color: var(--primary);
-  text-align: justify;
+  text-align: left;
   font-size: 2rem;
   margin-left: 1rem;
   margin-right: 2rem;
@@ -125,21 +125,21 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   margin-right: 2rem;
-  margin-left: 3.7rem;
+  margin-left: 3.2rem;
 }
 .artikel h5 {
   color: var(--primary);
   text-align: justify;
   font-size: 1.5rem;
   margin-right: 2rem;
-  margin-left: 3.7rem;
+  margin-left: 3.2rem;
   margin-bottom: 1rem;
 }
 .artikel h6 {
   color: rgb(255, 255, 255);
   text-align: justify;
   font-size: 1.5rem;
-  margin-left: 3.7rem;
+  margin-left: 3.2rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
 }
@@ -155,7 +155,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
-  margin-left: 3.7rem;
+  margin-left: 3.2rem;
 }
 .artikel .row {
   display: flex;
@@ -275,29 +275,36 @@ body {
   body {
     font-size: 14px;
   }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
   }
 
-  .navbar-logo {
-    margin-bottom: 1rem;
+  .navbar .navbar-nav.active {
+    right: 0;
   }
 
-  .navbar-nav {
-    flex-direction: column;
-    margin-bottom: 1rem;
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
   }
-
-  .navbar-nav a {
-    margin-bottom: 0.5rem;
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
   }
-
-  .navbar-extra {
-    margin-top: 1rem;
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
   }
-
   .hero {
     padding: 2rem;
   }
