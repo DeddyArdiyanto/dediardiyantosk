@@ -271,9 +271,9 @@ body {
 }
 
 /* Mobile Phone */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
+@media (max-width: 600px) {
+  html {
+    font-size: 55%;
   }
   #hamburger-menu {
     display: inline-block;
@@ -305,10 +305,6 @@ body {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
-  .hero {
-    padding: 2rem;
-  }
-
   .artikel {
     padding: 2rem;
   }
