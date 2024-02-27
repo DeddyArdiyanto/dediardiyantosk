@@ -115,8 +115,8 @@ body {
   color: var(--primary);
   text-align: justify;
   font-size: 2rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
   margin-bottom: 1rem;
 }
 .artikel h4 {
@@ -124,22 +124,23 @@ body {
   text-align: justify;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  margin-left: 7rem;
+  margin-right: 2rem;
+  margin-left: 3.7rem;
 }
 .artikel h5 {
   color: var(--primary);
   text-align: justify;
   font-size: 1.5rem;
-  margin-right: 7rem;
-  margin-left: 9rem;
+  margin-right: 2rem;
+  margin-left: 3.7rem;
   margin-bottom: 1rem;
 }
 .artikel h6 {
   color: rgb(255, 255, 255);
   text-align: justify;
   font-size: 1.5rem;
-  margin-left: 9rem;
-  margin-right: 7rem;
+  margin-left: 3.7rem;
+  margin-right: 2rem;
   margin-bottom: 1rem;
 }
 .about h2 span,
@@ -153,15 +154,17 @@ body {
   text-align: justify;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  margin-right: 7rem;
-  margin-left: 8rem;
+  margin-right: 1rem;
+  margin-left: 3.7rem;
 }
 .artikel .row {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  justify-content: center;
+}
+.artikel .row .artikel-img {
+  flex: 0 0 20rem;
+}
+.artikel.row .artikel-img img {
+  width: 100%;
 }
 .about .row {
   display: flex;
@@ -240,7 +243,7 @@ body {
     flex-wrap: wrap;
   }
   .artikel .row .about-img img {
-    height: 30rem;
+    height: 20rem;
     object-fit: cover;
     object-position: center;
   }
@@ -248,7 +251,7 @@ body {
     flex-wrap: wrap;
   }
   .about .row .about-img img {
-    height: 30rem;
+    height: 20rem;
     object-fit: cover;
     object-position: center;
   }
@@ -268,8 +271,72 @@ body {
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 5;
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav a {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-extra {
+    margin-top: 1rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .artikel {
+    padding: 2rem;
+  }
+
+  .artikel h2 {
+    font-size: 2rem;
+  }
+
+  .artikel h3 {
+    font-size: 1.5rem;
+  }
+
+  .artikel p {
+    font-size: 1rem;
+  }
+
+  .artikel img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about {
+    padding: 2rem;
+  }
+
+  .about-img {
+    margin-bottom: 1rem;
+  }
+
+  .about-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    text-align: center;
   }
 }
